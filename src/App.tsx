@@ -12,6 +12,7 @@ import { Reviews } from './components/Reviews';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { CardSection } from './components/ui/CardSection';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 function App() {
   useEffect(() => {
@@ -85,6 +86,8 @@ function App() {
           <Footer />
         </div>
       </div>
+
+      <FloatingWhatsApp />
     </div>
   );
 }

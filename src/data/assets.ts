@@ -28,17 +28,17 @@ export const ASSETS = {
     birdWatching: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80"
   },
   gallery: [
-    { url: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80", label: "Jawai Landscapes" },
-    { url: "https://images.unsplash.com/photo-1615963244664-5b845b2025ee?auto=format&fit=crop&q=80", label: "Leopard Sightings" },
-    { url: "https://images.unsplash.com/photo-1540541338287-417002060d60?auto=format&fit=crop&q=80", label: "Luxury Interiors" },
-    { url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&q=80", label: "Campfire Evenings" },
-    { url: "https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&q=80", label: "Cultural Heritage" },
-    { url: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80", label: "Misty Hills" },
-    { url: "https://images.unsplash.com/photo-1534234828563-0255139fdb7d?auto=format&fit=crop&q=80", label: "Private Deck" },
-    { url: "https://images.unsplash.com/photo-1544985336-6e020c3d790d?auto=format&fit=crop&q=80", label: "Wildlife Trails" },
-    { url: "https://images.unsplash.com/photo-1519055548599-6d4d129508c4?auto=format&fit=crop&q=80", label: "Starry Nights" },
-    { url: "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?auto=format&fit=crop&q=80", label: "Rabari Shepherds" },
-    { url: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80", label: "Safari Jeep" }
+    { url: "/images/1.jpeg", label: "Jawai Landscapes" },
+    { url: "/images/2.jpeg", label: "Leopard Sightings" },
+    { url: "/images/3.jpeg", label: "Luxury Interiors" },
+    { url: "/images/4.jpeg", label: "Campfire Evenings" },
+    { url: "/images/5.jpeg", label: "Cultural Heritage" },
+    { url: "/images/6.jpeg", label: "Misty Hills" },
+    { url: "/images/7.jpeg", label: "Private Deck" },
+    { url: "/images/8.jpeg", label: "Wildlife Trails" },
+    { url: "/images/9.jpeg", label: "Starry Nights" },
+    { url: "/images/10.jpeg", label: "Rabari Shepherds" },
+    { url: "/images/11.jpeg", label: "Safari Jeep" }
   ],
   galleryFooter: "https://images.unsplash.com/photo-1535083252457-6080fe29be45?auto=format&fit=crop&q=80",
   suites: {

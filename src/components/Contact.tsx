@@ -27,7 +27,7 @@ export const Contact = () => {
               <Phone className="text-deep-red" size={24} />
               <div>
                 <h4 className="uppercase tracking-wider font-bold text-sm text-charcoal">Phone</h4>
-                <p className="text-gray-600 font-light text-lg">+91 98765 43210</p>
+                <p className="text-gray-600 font-light text-lg">+91 93255 69661</p>
               </div>
             </div>
             <div className="flex items-center space-x-6">

@@ -39,7 +39,14 @@ export const Footer = () => {
           <div>
             <h4 className="uppercase tracking-widest text-sm font-bold mb-6 text-desert text-left">Follow Us</h4>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram size={24} /></a>
+              <a 
+                href="https://www.instagram.com/jawai_wildframe/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook size={24} /></a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter size={24} /></a>
             </div>
