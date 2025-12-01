@@ -4,13 +4,13 @@
 export const ASSETS = {
   hero: {
     // Main Hero Video (Replace with your actual video URL)
-    video: "https://videos.pexels.com/video-files/2546682/2546682-hd_1920_1080_30fps.mp4", 
+    video: "/videos/jawai f 480p.mp4", 
     // Cover image shown while video loads or on mobile low-power modes
-    cover: "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80"
+    cover: "/images/jawai 7.webp?auto=format&fit=crop&q=80"
   },
   about: {
-    safariSilhouette: "https://images.unsplash.com/photo-1552458742-53994329acde?auto=format&fit=crop&q=80",
-    luxuryDeck: "https://images.unsplash.com/photo-1534234828563-0255139fdb7d?auto=format&fit=crop&q=80"
+    safariSilhouette: "images/shepherd jawai.jpg?auto=format&fit=crop&q=80",
+    luxuryDeck: "/images/jawai 4 (Large).jpg?auto=format&fit=crop&q=80/"
   },
   conservation: {
     community: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&q=80",
@@ -20,11 +20,11 @@ export const ASSETS = {
     bushDinner: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80"
   },
   experiences: {
-    leopardSafari: "https://images.unsplash.com/photo-1603499151566-489a9419459f?auto=format&fit=crop&q=80",
-    luxuryStay: "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?auto=format&fit=crop&q=80",
-    villageWalk: "https://images.unsplash.com/photo-1591533985313-a431526563bc?auto=format&fit=crop&q=80",
-    hillSunrise: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80",
-    bushDinner: "https://images.unsplash.com/photo-1533254773296-862a8151c957?auto=format&fit=crop&q=80",
+    leopardSafari: "/images/leopard jawai.jpg?auto=format&fit=crop&q=80",
+    luxuryStay: "/images/tents (Large).jpg?auto=format&fit=crop&q=80",
+    villageWalk: "/images/village walk.jpg?auto=format&fit=crop&q=80",
+    hillSunrise: "/images/jawai sunrise.jpg?auto=format&fit=crop&q=80",
+    bushDinner: "/images/bush.jpg?auto=format&fit=crop&q=80",
     birdWatching: "https://images.unsplash.com/photo-1452570053594-1b985d6ea890?auto=format&fit=crop&q=80"
   },
   gallery: [
@@ -38,11 +38,11 @@ export const ASSETS = {
     { url: "/images/8.jpeg", label: "Wildlife Trails" },
     { url: "/images/9.jpeg", label: "Starry Nights" },
     { url: "/images/10.jpeg", label: "Rabari Shepherds" },
-    { url: "/images/11.jpeg", label: "Safari Jeep" }
+    { url: "/images/11.jpg", label: "Safari Jeep" }
   ],
   galleryFooter: "https://images.unsplash.com/photo-1535083252457-6080fe29be45?auto=format&fit=crop&q=80",
   suites: {
     stoneCottage: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80",
-    tentedSuite: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?auto=format&fit=crop&q=80"
+    tentedSuite: "/images/comfort stay.jpg?auto=format&fit=crop&q=80"
   }
 };
