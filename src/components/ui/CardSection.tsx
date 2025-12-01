@@ -18,8 +18,8 @@ export const CardSection: React.FC<CardSectionProps> = ({ children, className = 
       }}
     >
       <div className="flex-1 w-full h-full overflow-y-auto scrollbar-hide">
-        {/* Changed justify-center to justify-start and reduced pt-32 to pt-24 to remove gap */}
-        <div className="min-h-full flex flex-col justify-start pt-24 pb-20">
+        {/* Removed pb-20 to allow content to reach the bottom edge */}
+        <div className="min-h-full flex flex-col justify-start pt-24">
           {children}
         </div>
       </div>
