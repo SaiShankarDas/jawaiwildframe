@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { ASSETS } from '../data/assets';
 
 export const Hero = () => {
   const ref = useRef(null);
@@ -16,18 +17,31 @@ export const Hero = () => {
   const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    // Changed to sticky top-0 to create the overlap effect
+    // Sticky top-0 to create the overlap effect
     <section ref={ref} id="hero" className="sticky top-0 h-screen w-full overflow-hidden bg-charcoal -z-10">
-      {/* Parallax Background */}
+      {/* Parallax Background Video */}
       <motion.div 
         style={{ y: backgroundY }}
         className="absolute inset-0 w-full h-[120%] -top-[10%]" 
       >
-        <img 
-          src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&q=80" 
-          alt="Jawai Landscape" 
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={ASSETS.hero.cover}
           className="w-full h-full object-cover"
-        />
+        >
+          <source src={ASSETS.hero.video} type="video/mp4" />
+          {/* Fallback image if video fails */}
+          <img 
+            src={ASSETS.hero.cover} 
+            alt="Jawai Landscape" 
+            className="w-full h-full object-cover"
+          />
+        </video>
+        
+        {/* Overlay Gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/50" />
       </motion.div>
 

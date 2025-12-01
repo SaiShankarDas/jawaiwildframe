@@ -1,65 +1,57 @@
 import React from 'react';
-import { Section, FadeIn } from './ui/Section';
-import { ParallaxImage } from './ui/ParallaxImage';
+import { FadeIn } from './ui/Section';
+import { ASSETS } from '../data/assets';
+import { ArrowRight } from 'lucide-react';
 
 const suites = [
   {
     title: "Luxury Stone Cottage",
-    desc: "Hewn from local stone and blending seamlessly into the landscape, our cottages offer cool respite and absolute privacy. Featuring private verandas that overlook the wilderness.",
-    image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&q=80",
-    features: ["Private Veranda", "En-suite Bath", "Air Conditioning"]
+    desc: "Hewn from local stone, offering cool respite and absolute privacy with private verandas.",
+    image: ASSETS.suites.stoneCottage,
   },
   {
     title: "Signature Tented Suite",
-    desc: "Experience the romance of the safari era. Our spacious canvas suites combine old-world charm with modern luxury, featuring handcrafted furniture and sweeping views of the granite hills.",
-    image: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?auto=format&fit=crop&q=80",
-    features: ["Canvas Walls", "King Size Bed", "Panoramic Views"]
+    desc: "Experience the romance of the safari era with canvas walls and panoramic views.",
+    image: ASSETS.suites.tentedSuite,
   }
 ];
 
 export const Suites = () => {
   return (
-    <Section id="stays" className="bg-warm-white">
-      <div className="text-center mb-24">
+    // Changed justify-center to justify-start
+    <div className="container mx-auto px-6 md:px-12 h-full flex flex-col justify-start">
+      <div className="text-left mb-12 lg:mb-20">
         <FadeIn>
           <span className="text-desert uppercase tracking-widest text-sm font-bold">Accommodations</span>
-          <h2 className="font-serif text-4xl md:text-5xl text-charcoal mt-4">Sanctuaries of Comfort</h2>
+          <h2 className="font-serif text-4xl md:text-6xl text-charcoal mt-4">Sanctuaries of Comfort</h2>
         </FadeIn>
       </div>
 
-      <div className="space-y-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         {suites.map((suite, index) => (
-          <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-24 items-center`}>
-            <FadeIn className="w-full lg:w-1/2">
-              <ParallaxImage 
+          <FadeIn key={index} delay={index * 0.2} className="group cursor-pointer">
+            <div className="relative h-[300px] md:h-[400px] overflow-hidden rounded-lg shadow-lg mb-6">
+              <img 
                 src={suite.image} 
                 alt={suite.title} 
-                height="h-[500px] md:h-[600px]"
-                className="shadow-xl"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-            </FadeIn>
-            <FadeIn delay={0.2} className="w-full lg:w-1/2 space-y-8">
-              <h3 className="font-serif text-3xl md:text-5xl text-charcoal leading-tight">{suite.title}</h3>
-              <p className="text-gray-600 font-light text-lg leading-relaxed">
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
+            </div>
+            <div className="space-y-4">
+              <h3 className="font-serif text-2xl md:text-3xl text-charcoal group-hover:text-desert transition-colors">
+                {suite.title}
+              </h3>
+              <p className="text-gray-600 font-light text-lg">
                 {suite.desc}
               </p>
-              <ul className="flex flex-wrap gap-x-8 gap-y-4 pt-4 border-t border-gray-200">
-                {suite.features.map((feature, i) => (
-                  <li key={i} className="text-xs uppercase tracking-widest text-charcoal/70 font-bold flex items-center">
-                    <span className="w-1.5 h-1.5 bg-desert rounded-full mr-3" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="pt-6">
-                <button className="px-10 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 uppercase tracking-widest text-xs font-bold">
-                  View Details
-                </button>
+              <div className="flex items-center text-xs uppercase tracking-widest font-bold text-charcoal group-hover:translate-x-2 transition-transform">
+                View Details <ArrowRight size={14} className="ml-2" />
               </div>
-            </FadeIn>
-          </div>
+            </div>
+          </FadeIn>
         ))}
       </div>
-    </Section>
+    </div>
   );
 };

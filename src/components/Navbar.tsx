@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -13,26 +13,13 @@ const navLinks = [
 ];
 
 export const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          isScrolled ? 'bg-warm-white/95 backdrop-blur-sm shadow-md py-4' : 'bg-transparent py-6'
-        }`}
-      >
+      <nav className="fixed top-0 left-0 w-full z-50 bg-warm-white shadow-md py-4 transition-all duration-300">
         <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-          <a href="#" className={`font-serif text-2xl tracking-widest font-bold uppercase transition-colors duration-300 ${isScrolled ? 'text-charcoal' : 'text-white'}`}>
+          <a href="#" className="font-serif text-2xl tracking-widest font-bold uppercase text-charcoal">
             Jawai Wildframe
           </a>
 
@@ -42,18 +29,14 @@ export const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm tracking-widest uppercase hover:text-desert transition-colors duration-300 ${isScrolled ? 'text-charcoal' : 'text-white/90'}`}
+                className="text-sm tracking-widest uppercase text-charcoal/80 hover:text-desert transition-colors duration-300"
               >
                 {link.name}
               </a>
             ))}
             <a
               href="#contact"
-              className={`px-6 py-2 border transition-all duration-300 uppercase text-xs tracking-widest font-bold ${
-                isScrolled
-                  ? 'border-charcoal text-charcoal hover:bg-charcoal hover:text-white'
-                  : 'border-white text-white hover:bg-white hover:text-charcoal'
-              }`}
+              className="px-6 py-2 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 uppercase text-xs tracking-widest font-bold"
             >
               Book Now
             </a>
@@ -67,7 +50,7 @@ export const Navbar = () => {
             {isMobileMenuOpen ? (
               <X className="text-charcoal" />
             ) : (
-              <Menu className={isScrolled ? 'text-charcoal' : 'text-white'} />
+              <Menu className="text-charcoal" />
             )}
           </button>
         </div>

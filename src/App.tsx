@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { AboutSectionWrapper } from './components/About'; // Updated Import
+import { About } from './components/About';
 import { Experiences } from './components/Experiences';
 import { Suites } from './components/Suites';
 import { Conservation } from './components/Conservation';
@@ -11,10 +11,10 @@ import { Dining } from './components/Dining';
 import { Reviews } from './components/Reviews';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { CardSection } from './components/ui/CardSection';
 
 function App() {
   useEffect(() => {
-    // Initialize Lenis for smooth scrolling
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -36,25 +36,54 @@ function App() {
   }, []);
 
   return (
-    <div className="font-sans text-charcoal bg-charcoal overflow-x-hidden selection:bg-desert selection:text-white">
+    <div className="font-sans text-charcoal bg-charcoal selection:bg-desert selection:text-white">
       <Navbar />
       
-      {/* Hero Section - Sticky & Lower Z-Index */}
-      <div className="relative z-0">
+      {/* Normal Scroll Sections */}
+      <div className="relative z-0 bg-charcoal">
         <Hero />
       </div>
 
-      {/* Main Content - Slides over Hero */}
-      <div className="relative z-10 bg-warm-white shadow-[0_-50px_100px_rgba(0,0,0,0.3)] rounded-t-3xl md:rounded-none mt-[-20px] md:mt-0">
-        <AboutSectionWrapper />
-        <Experiences />
-        <Suites />
-        <Conservation />
-        <Gallery />
-        <Dining />
-        <Reviews />
-        <Contact />
-        <Footer />
+      <div id="about" className="relative z-0 bg-warm-white min-h-screen flex items-center py-20">
+        <About />
+      </div>
+
+      {/* Stacking Cards (Limited to 4 sections) */}
+      <div className="relative w-full">
+        <CardSection id="experiences" index={1} className="bg-white">
+          <Experiences />
+        </CardSection>
+
+        <CardSection id="stays" index={2} className="bg-warm-white">
+          <Suites />
+        </CardSection>
+
+        <CardSection id="conservation" index={3} className="bg-sandstone">
+          <Conservation />
+        </CardSection>
+
+        <CardSection id="gallery" index={4} className="bg-charcoal text-white">
+          <Gallery />
+        </CardSection>
+      </div>
+
+      {/* Final Normal Scroll Section (Slides over the stack) */}
+      <div className="relative z-50 bg-warm-white shadow-[0_-50px_100px_rgba(0,0,0,0.3)]">
+        <div id="dining" className="min-h-[80vh] relative">
+          <Dining />
+        </div>
+
+        <div id="reviews" className="bg-white py-20">
+          <Reviews />
+        </div>
+
+        <div id="contact" className="bg-sandstone/20 py-20">
+          <Contact />
+        </div>
+
+        <div className="bg-charcoal text-white">
+          <Footer />
+        </div>
       </div>
     </div>
   );
