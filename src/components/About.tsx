@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ASSETS } from '../data/assets';
 
 export const About = () => {
   return (
@@ -28,43 +27,22 @@ export const About = () => {
             <p className="text-gray-500 font-light text-base md:text-lg leading-loose max-w-xl mx-auto lg:mx-0 text-justify lg:text-left">
               Jawai Wildframe curates immersive safaris through one of India’s most enchanting wildernesses — a landscape where leopards roam the granite hills, migratory birds fill the skies, and local communities live in rare harmony with wildlife. Guided by expert naturalist Balveer Singh Mewar, every experience blends authenticity, conservation, and deep storytelling.
             </p>
-            
-            {/* Minimal Illustrated Leopard Icon - Bottom Right */}
-            <div className="flex justify-center lg:justify-end mt-10 opacity-80">
-               <img 
-                 src="https://cdn-icons-png.flaticon.com/512/15707/15707379.png" 
-                 alt="Leopard Icon" 
-                 className="w-16 h-16 object-contain opacity-60 hover:opacity-100 transition-opacity duration-500" 
-               />
-            </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Images Grid - Preserving structure but ensuring smooth transitions */}
-      <div className="lg:w-1/2 relative h-[50vh] lg:h-[70vh] w-full">
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute top-0 right-0 w-3/4 h-3/4 shadow-2xl overflow-hidden rounded-sm"
+      {/* Right Side: Large Icon instead of photos */}
+      <div className="lg:w-1/2 flex justify-center items-center relative h-[40vh] lg:h-[auto] w-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
+          whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+          className="w-full flex justify-center"
         >
-          <img 
-            src={ASSETS.about.safariSilhouette} 
-            alt="Safari Silhouette" 
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s] ease-out"
-          />
-        </motion.div>
-        <motion.div 
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute bottom-0 left-0 w-2/3 h-2/3 shadow-2xl overflow-hidden rounded-sm border-4 border-warm-white"
-        >
-          <img 
-            src={ASSETS.about.luxuryDeck} 
-            alt="Luxury Deck" 
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.5s] ease-out"
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/15707/15707379.png"
+            alt="Leopard of Jawai"
+            className="w-64 h-64 md:w-80 md:h-80 lg:w-[30rem] lg:h-[30rem] object-contain opacity-80 hover:opacity-100 transition-opacity duration-700 drop-shadow-2xl"
           />
         </motion.div>
       </div>
