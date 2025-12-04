@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { WildernessSafaris } from './components/WildernessSafaris'; // Imported
 import { Experiences } from './components/Experiences';
 import { Suites } from './components/Suites';
 import { Conservation } from './components/Conservation';
@@ -47,6 +48,11 @@ function App() {
 
       <div id="about" className="relative z-0 bg-warm-white min-h-screen flex items-center py-20">
         <About />
+      </div>
+
+      {/* New Wilderness Safaris Section */}
+      <div id="safari" className="relative z-0 w-full">
+        <WildernessSafaris />
       </div>
 
       {/* Stacking Cards (Limited to 4 sections) */}

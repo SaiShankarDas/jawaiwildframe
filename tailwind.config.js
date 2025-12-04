@@ -12,6 +12,9 @@ export default {
         charcoal: '#1a1a1a',
         'warm-white': '#f8f5f0',
         'deep-red': '#7a2727',
+        'forest-green': '#0F2F1E',
+        'ivory': '#F6F1E8',
+        'soft-gray': '#E9E4DA',
       },
       fontFamily: {
         serif: ['"Playfair Display"', 'serif'],
